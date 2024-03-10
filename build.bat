@@ -37,7 +37,7 @@ set arr[4].folder=base_theory_tasks_p1
 set arr[5].folder=obuchaika
 set arr[6].folder=writers
 
-for /L %%i in (0,1,5) do ( 
+for /L %%i in (0,1,6) do ( 
 	copy ..\%SOURCE_FOLDER%\!arr[%%i].folder!\!arr[%%i].file! .\!arr[%%i].folder!
 )
 
