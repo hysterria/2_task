@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace IBusko {
+namespace ABelyaeva {
 	class LongNumber {
 		static const char END = '\0';
 		static const char MINUS = '-';
@@ -37,6 +37,7 @@ namespace IBusko {
 			
 			int get_digits_number() const;
 			bool is_positive() const;
+			bool is_negative() const;
 			
 			friend std::ostream& operator << (std::ostream &os, const LongNumber& x);
 			

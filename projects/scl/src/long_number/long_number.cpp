@@ -1,6 +1,6 @@
 #include "long_number.hpp"
 
-namespace IBusko {
+namespace ABelyaeva {
 	LongNumber::LongNumber() {
 		sign = POSITIVE;
 		length = 0;
@@ -394,6 +394,10 @@ namespace IBusko {
 	
 	bool LongNumber::is_positive() const {
 		return sign == POSITIVE;
+	}
+
+	bool LongNumber::is_negative() const {
+		return sign == NEGATIVE;
 	}
 	
 	
