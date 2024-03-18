@@ -38,44 +38,44 @@ TEST_F(EqualityFixture, not_equal_negative_var) {
 		<< "Проверка " << one_v1 << " == " << negative_one;
 }
 
-TEST_F(EqualityFixture, EqualityOperator) {
+TEST_F(EqualityFixture, equal_operator) {
 	ABelyaeva::LongNumber one_v2("1");
 	ASSERT_TRUE(one_v1 == one_v2);
 	ASSERT_FALSE(one_v1 == negative_one);
 	ASSERT_FALSE(one_v1 == two);
 }
 
-TEST_F(EqualityFixture, GreaterThanOperator) {
+TEST_F(EqualityFixture, greater_operator) {
 	ASSERT_TRUE(two > one_v1);
 	ASSERT_TRUE(zero > negative_one);
 	ASSERT_FALSE(one_v1 > two);
 }
 
-TEST_F(EqualityFixture, LessThanOperator) {
+TEST_F(EqualityFixture, less_operator) {
 	ASSERT_TRUE(one_v1 < two);
 	ASSERT_FALSE(zero < negative_one);
 	ASSERT_FALSE(two < one_v1);
 }
 
-TEST_F(EqualityFixture, AdditionOperator) {
+TEST_F(EqualityFixture, add_operator) {
 	ABelyaeva::LongNumber sum = one_v1 + one_v2;
 	ASSERT_EQ(two, sum);
 	ASSERT_FALSE(sum.is_negative());
 }
 
-TEST_F(EqualityFixture, SubtractionOperator) {
+TEST_F(EqualityFixture, subtr_operator) {
 	ABelyaeva::LongNumber difference = one_v1 - two;
 	ASSERT_EQ(negative_one, difference);
 	ASSERT_TRUE(difference.is_negative());
 }
 
-TEST_F(EqualityFixture, MultiplicationOperator) {
+TEST_F(EqualityFixture, multip_operator) {
 	ABelyaeva::LongNumber product = one_v1 * two;
 	ASSERT_EQ(two, product);
 	ASSERT_FALSE(product.is_negative());
 }
 
-TEST_F(EqualityFixture, DivisionOperator) {
+TEST_F(EqualityFixture, div_operator) {
 	ABelyaeva::LongNumber dividend(twelve);
 	ABelyaeva::LongNumber divisor(two);
 	ABelyaeva::LongNumber quotient = dividend / divisor;
@@ -83,7 +83,7 @@ TEST_F(EqualityFixture, DivisionOperator) {
 	ASSERT_FALSE(quotient.is_negative());
 }
 
-TEST_F(EqualityFixture, ModulusOperator) {
+TEST_F(EqualityFixture, mod_operator) {
 	ABelyaeva::LongNumber dividend(six);
 	ABelyaeva::LongNumber divisor(two);
 	ABelyaeva::LongNumber remainder = dividend % divisor;
